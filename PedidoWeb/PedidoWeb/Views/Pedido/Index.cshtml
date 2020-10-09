@@ -1,0 +1,72 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Generar Pedido</h2>
+
+<div class="row">
+    <div class="container">
+
+        <form>
+            <div class="form-row">
+                <div class="col-md-4 mb-3">
+                    <label for="Nombre">Nombre</label>
+                    <input type="text" class="form-control" id="Nombre" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="ApellidoPaterno">Apellido Paterno</label>
+                    <input type="text" class="form-control" id="ApellidoPaterno" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="ApellidoMaterno">Apellido Materno</label>
+                    <input type="text" class="form-control" id="ApellidoMaterno" required>
+                </div>
+
+            </div>
+            <div class="form-row">
+                <div class="col-md-4 mb-3">
+                    <label for="dropProductos">Productos</label>
+                    <select id="dropProductos" name="dropProductos" class="form-control">                       
+                    </select>
+                </div>
+
+            </div>
+            <div class="row">
+                <button id="btnGeneraPedido" class="btn btn-primary" type="button">Generar Pedido</button>
+            </div>
+            <div class="row">
+                <p class="lead">Total <span id="spanTotal">0</span>  </p>
+
+            </div>
+
+
+        </form>
+
+        <div class="row ">
+            <table id="tblProductos" class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">SKU</th>
+                        <th scope="col">Producto</th>
+                        <th scope="col">Cantidad</th>
+                        <th scope="col">Precio</th>                      
+
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+</div>
+
+
+@section Scripts
+{
+    @Scripts.Render("~/bundles/app")
+}
+
+
